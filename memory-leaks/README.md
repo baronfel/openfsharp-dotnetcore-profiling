@@ -13,7 +13,7 @@ It also contains two Dockerfiles for building and running the application, one f
 First you'll need to build the application for the runtime you care to test: `./build.sh 2.2` or `./build.sh 3.0`
 This will result in a named container: `memory-leak:2.2` or `memory-leak:3.0`.
 
-Then, you'll run the application in its container: `./run.sh 2.2` or `./run.sh 3.0`.  These scripts will start the container with a particular name so that the following scripts can connect.
+Then, you'll run the application in its container: `./start.sh 2.2` or `./start.sh 3.0`.  These scripts will start the container with a particular name so that the following scripts can connect.
 
 Finally, you'll capture a dump using `./dump.sh 2.2` or `./dump.sh 3.0`.  These helper scripts will connect to the container, take a memory dump, and copy it to the `dump` folder in this sample with the version and timestamp appended.  You should take repeated memory dumps a bit apart, since the only way to confirm a leak is to see the upward trend over time in memory allocated.
 
@@ -40,8 +40,8 @@ From here you've identified that the event listener is to blame, so you log/find
 * disable this metrics collection
 * ???
 
-[prometheus-net.DotNetRuntime](https://github.com/djluck/prometheus-net.DotNetRuntime)
-[Giraffe](https://github.com/giraffe-fsharp/Giraffe)
+[prometheus-net.DotNetRuntime]: (https://github.com/djluck/prometheus-net.DotNetRuntime)
+[Giraffe]: (https://github.com/giraffe-fsharp/Giraffe)
 [lldb]: https://lldb.llvm.org/
 [dotnet-sos]: https://github.com/dotnet/diagnostics/blob/master/documentation/installing-sos-instructions.md
 [dotnet-dump]: https://github.com/dotnet/diagnostics/blob/master/documentation/dotnet-dump-instructions.md

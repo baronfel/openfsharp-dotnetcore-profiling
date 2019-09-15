@@ -1,1 +1,5 @@
 .vscode
+.ionide
+bin
+obj
+dump
