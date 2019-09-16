@@ -12,13 +12,14 @@ Each example is a self-contained project with dockerfiles to build and run the s
 
 This sample covers how to use the [dotnet-dump] tool to collect and analyze memory dumps of a running application.  It will also cover more in-depth investigations using LLDB directly.
 
-### Diagnosing stack overflows
-
-This sample covers how to use your debugger's thread information together with [dotnet-dump] to investigate the root cause of a Stack Overflow, which usually cannot be easily root-caused.
-
 ### Profiling CPU usage
 
 This sample covers how to use [dotnet-trace] and [speedscope] to collect and view CPU traces for your application. It also demonstrates the use of the [perf] tool on Linux for on-device profiling when a graphical user interface isn't available.
+
+### Diagnosing logic errors
+
+This sample covers how to use your debugger's thread information together with [dotnet-sos] to investigate incorrect logic in your application.
+
 
 ## Useful links
 
