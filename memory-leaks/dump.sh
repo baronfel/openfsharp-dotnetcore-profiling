@@ -8,7 +8,7 @@ fi
 
 TFM=$1
 
-OLD_CMD='/usr/share/dotnet/shared/Microsoft.NETCore.App/2.2.4/createdump --full --name  /dump/dump_$TFM_$(date --iso-8601=''seconds'') 1'
+OLD_CMD='/usr/share/dotnet/shared/Microsoft.NETCore.App/2.2.4/createdump --full --name /dump/dump_$TFM_$(date --iso-8601=''seconds'') 1'
 NEW_CMD='dotnet dump collect -p 1 -o /dump/dump_$TFM_$(date --iso-8601=''seconds'')'
 
 if [ "2.2" = "$1" ]
