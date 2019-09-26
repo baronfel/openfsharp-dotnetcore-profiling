@@ -10,6 +10,10 @@ FROM mcr.microsoft.com/dotnet/core/sdk:3.0 as debug_tools
 
 ENV TOOL_VERSION=3.0.0-preview9.19454.1
 
+# install the `perf` tool
+RUN apt update && apt install -y linux-perf
+
+
 # install dotnet tools for dump and sos
 ENV PATH=$PATH:$HOME/.dotnet/tools
 RUN dotnet tool install -g dotnet-symbol
@@ -25,6 +29,6 @@ ENV COMPlus_PerfMapEnabled=1
 WORKDIR /app
 
 # preload framework PDBs
-RUN dotnet symbol *.dll
+RUN dotnet symbol ./Profile
 
 CMD [ "./Profile" ]
